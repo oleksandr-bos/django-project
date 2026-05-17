@@ -23,3 +23,6 @@ def product_detail(request,id,slug):
                                               available=True).exclude(id=product.id)[:4]
     return render(request, 'main/product/detail.html',{'product': product,
                                                        'related_products': related_products})
+
+def about(request):
+    return render(request, 'main/about.html')
